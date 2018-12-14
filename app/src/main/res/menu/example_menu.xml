@@ -5,17 +5,18 @@
         android:title="item1"
         android:icon="@drawable/ic_launcher_foreground"
         app:showAsAction="ifRoom|withText"/>
+    <!--app:showAsAction="ifRoom" 可以让 item ActionBar 显示-->
     <group android:id="@+id/group">
         <item android:id="@+id/group_item1"
             android:title="group_item1"
-            android:icon="@drawable/ic_launcher_foreground" />
+            android:icon="@drawable/printer256" />
         <item android:id="@+id/group_item2"
             android:title="group_item2"
-            android:icon="@drawable/ic_launcher_foreground" />
+            android:icon="@drawable/printer256" />
     </group>
     <item android:id="@+id/submenu"
         android:title="submenu"
-        app:showAsAction="ifRoom|withText" >
+        app:showAsAction="withText" >
         <menu>
             <item android:id="@+id/submenu_item1"
                 android:title="submenu_item1" />
