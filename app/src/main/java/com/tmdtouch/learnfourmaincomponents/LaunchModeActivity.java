@@ -2,21 +2,27 @@ package com.tmdtouch.learnfourmaincomponents;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 
 public class LaunchModeActivity extends BaseActivity {
-
-    Button mRestartActBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch_mode);
 
-        mRestartActBtn = findViewById(R.id.learn_launch_mode_btn);
-        mRestartActBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(LaunchModeActivity.this, LaunchModeActivity.class);
+        findViewById(R.id.restart_activity_btn).setOnClickListener(v -> {
+            // 显式调用
+//            Intent intent = new Intent(LaunchModeActivity.this, LaunchModeActivity.class);
+
+            // 隐式调用
+            Intent intent = new Intent();
+            intent.setAction("com.wendraw.demo.singleinstance");
             startActivity(intent);
         });
+        findViewById(R.id.open_other_activity_btn).setOnClickListener(v -> {
+            Intent intent = new Intent(LaunchModeActivity.this, OtherLaunchModeActivity.class);
+            startActivity(intent);
+        });
+
     }
 }

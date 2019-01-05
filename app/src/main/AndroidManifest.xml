@@ -23,7 +23,16 @@
         <activity android:name=".SecondActivity" />
         <activity
             android:name=".LaunchModeActivity"
-            android:launchMode="standard" />
+            android:taskAffinity="com.wendraw.demo.singleinstance"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="com.wendraw.demo.singleinstance" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".OtherLaunchModeActivity"
+            android:launchMode="singleTask" />
     </application>
 
 </manifest>

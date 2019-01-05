@@ -1,6 +1,5 @@
 package com.tmdtouch.learnfourmaincomponents;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -104,7 +103,10 @@ public class MainActivity extends BaseActivity {
 
         mLearnLaunchModeBtn = findViewById(R.id.learn_launch_mode_btn);
         mLearnLaunchModeBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, LaunchModeActivity.class);
+//            Intent intent = new Intent(MainActivity.this, LaunchModeActivity.class);
+
+            Intent intent = new Intent();
+            intent.setAction("com.wendraw.demo.singleinstance");
             startActivity(intent);
         });
     }

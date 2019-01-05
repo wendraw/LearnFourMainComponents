@@ -8,25 +8,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 public class BaseActivity extends AppCompatActivity {
-    public final String TAG = "Life Cycle";
-    public static final String LAUNCHMODE = "Launch Mode";
+    public final String TAG = "Life Cycle - " + getClass().getSimpleName();
+    public final String LAUNCHMODE = "Life Cycle(Launch Mode) - " + getClass().getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(TAG, "**************onCreate**************");
-        Log.d(LAUNCHMODE, "**************onCreate**************");
-        Log.d(LAUNCHMODE, "onCreate: " + getClass().getSimpleName() + "TaskId: " + getTaskId() + "HashCode: " + this.hashCode());
+        Log.d(LAUNCHMODE, "onCreate: " + getClass().getSimpleName() + "'s TaskId: "
+                + getTaskId() + " HashCode: " + this.hashCode());
         dumpTaskAffinity();
-    }
-
-    @Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
-        Log.d(LAUNCHMODE, "**************onCreate**************");
-        Log.d(LAUNCHMODE, "onNewIntent: " + getClass().getSimpleName() + "TaskId: " + getTaskId() + "HashCode: " + this.hashCode());
-        ;
     }
 
     @Override
@@ -63,6 +55,13 @@ public class BaseActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "onDestroy");
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Log.d(LAUNCHMODE, "onNewIntent: " + getClass().getSimpleName() + " TaskId: "
+                + getTaskId() + " HashCode: " + this.hashCode());
     }
 
     protected void dumpTaskAffinity() {
