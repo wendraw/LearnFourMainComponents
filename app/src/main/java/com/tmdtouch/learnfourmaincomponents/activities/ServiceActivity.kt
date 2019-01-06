@@ -42,6 +42,11 @@ class ServiceActivity : AppCompatActivity() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        unbindService(mServiceConnection)
+    }
+
     inner class MyServiceConnection : ServiceConnection {
 
         override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
