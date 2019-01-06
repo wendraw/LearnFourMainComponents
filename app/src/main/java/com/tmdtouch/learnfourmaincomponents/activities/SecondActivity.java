@@ -1,8 +1,11 @@
-package com.tmdtouch.learnfourmaincomponents;
+package com.tmdtouch.learnfourmaincomponents.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+
+import com.tmdtouch.learnfourmaincomponents.fragments.FirstFragment;
+import com.tmdtouch.learnfourmaincomponents.R;
 
 public class SecondActivity extends BaseActivity {
 

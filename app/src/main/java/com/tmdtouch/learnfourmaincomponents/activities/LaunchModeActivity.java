@@ -1,7 +1,9 @@
-package com.tmdtouch.learnfourmaincomponents;
+package com.tmdtouch.learnfourmaincomponents.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.tmdtouch.learnfourmaincomponents.R;
 
 public class LaunchModeActivity extends BaseActivity {
 

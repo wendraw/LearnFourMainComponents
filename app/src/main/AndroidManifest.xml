@@ -20,19 +20,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity" />
+        <activity android:name=".activities.SecondActivity" />
         <activity
-            android:name=".LaunchModeActivity"
-            android:taskAffinity="com.wendraw.demo.singleinstance"
-            android:launchMode="singleInstance">
+            android:name=".activities.LaunchModeActivity"
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.wendraw.demo.singleinstance">
             <intent-filter>
                 <action android:name="com.wendraw.demo.singleinstance" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".OtherLaunchModeActivity"
+            android:name=".activities.OtherLaunchModeActivity"
             android:launchMode="singleTask" />
+
+        <service
+            android:name=".services.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".activities.ServiceActivity"/>
     </application>
 
 </manifest>

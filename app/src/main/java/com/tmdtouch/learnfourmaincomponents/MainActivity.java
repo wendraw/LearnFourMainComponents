@@ -10,6 +10,9 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.tmdtouch.learnfourmaincomponents.activities.BaseActivity;
+import com.tmdtouch.learnfourmaincomponents.activities.SecondActivity;
+
 public class MainActivity extends BaseActivity {
 
     private Button mOpenActivityBtn;
