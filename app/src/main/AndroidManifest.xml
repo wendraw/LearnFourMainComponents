@@ -11,6 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
+        <!--学习 Activity 的生命周期和启动模式-->
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation">
@@ -35,12 +37,26 @@
             android:name=".activities.OtherLaunchModeActivity"
             android:launchMode="singleTask" />
 
+        <!--学习 service-->
         <service
             android:name=".services.MyService"
             android:enabled="true"
             android:exported="true" />
+        <service android:name=".services.MyIntentService" />
 
-        <activity android:name=".activities.ServiceActivity"/>
+        <activity android:name=".activities.ServiceActivity" />
+
+        <!--学习 广播-->
+        <activity android:name=".activities.BroadcastActivity" />
+        <receiver
+            android:name=".broadcastreceivers.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="@string/app_name">
+            <intent-filter>
+                <action android:name="com.example.broadcasttest.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

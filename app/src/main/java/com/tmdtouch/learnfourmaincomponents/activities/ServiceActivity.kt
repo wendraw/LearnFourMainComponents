@@ -9,6 +9,7 @@ import android.os.IBinder
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.tmdtouch.learnfourmaincomponents.R
+import com.tmdtouch.learnfourmaincomponents.services.MyIntentService
 import com.tmdtouch.learnfourmaincomponents.services.MyService
 import kotlinx.android.synthetic.main.activity_service.*
 
@@ -39,6 +40,13 @@ class ServiceActivity : AppCompatActivity() {
 
         unbind_service_btn.setOnClickListener {
             unbindService(mServiceConnection)
+        }
+
+        start_intent_service_btn.setOnClickListener {
+            //打印主线程的 id
+            Log.d("ServiceActivity", "Thread id is " + Thread.currentThread().id)
+            val intent = Intent(this@ServiceActivity, MyIntentService::class.java)
+            startService(intent)
         }
     }
 

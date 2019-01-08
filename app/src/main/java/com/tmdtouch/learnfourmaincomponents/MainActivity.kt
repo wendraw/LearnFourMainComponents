@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.Toast
 
 import com.tmdtouch.learnfourmaincomponents.activities.BaseActivity
+import com.tmdtouch.learnfourmaincomponents.activities.BroadcastActivity
 import com.tmdtouch.learnfourmaincomponents.activities.SecondActivity
 import com.tmdtouch.learnfourmaincomponents.activities.ServiceActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -116,6 +117,11 @@ class MainActivity : BaseActivity() {
 
         open_service_activity_btn.setOnClickListener {
             val intent = Intent(this@MainActivity, ServiceActivity::class.java)
+            startActivity(intent)
+        }
+
+        open_broadcast_activity_btn.setOnClickListener {
+            val intent = Intent(this@MainActivity, BroadcastActivity::class.java)
             startActivity(intent)
         }
     }
