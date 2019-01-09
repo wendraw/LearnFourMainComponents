@@ -48,12 +48,13 @@
 
         <!--学习 广播-->
         <activity android:name=".activities.BroadcastActivity" />
+        <!--静态注册广播-->
         <receiver
             android:name=".broadcastreceivers.MyBroadcastReceiver"
             android:enabled="true"
-            android:exported="true"
-            android:permission="@string/app_name">
-            <intent-filter>
+            android:exported="true">
+            <!-- priority 设置 广播的优先级 -->
+            <intent-filter android:priority="100">
                 <action android:name="com.example.broadcasttest.MY_BROADCAST" />
             </intent-filter>
         </receiver>

@@ -5,11 +5,8 @@ import android.content.Context
 import android.content.Intent
 import android.widget.Toast
 
-class MyBroadcastReceiver : BroadcastReceiver() {
-
+class LocalBroadcastReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        Toast.makeText(context, "Received in MyBroadcast", Toast.LENGTH_SHORT).show()
-        //拦截广播
-        abortBroadcast()
+        Toast.makeText(context, "Received in LocalBroadcast", Toast.LENGTH_SHORT).show()
     }
 }
