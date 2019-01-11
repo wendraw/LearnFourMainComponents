@@ -9,11 +9,8 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
+import com.tmdtouch.learnfourmaincomponents.activities.*
 
-import com.tmdtouch.learnfourmaincomponents.activities.BaseActivity
-import com.tmdtouch.learnfourmaincomponents.activities.BroadcastActivity
-import com.tmdtouch.learnfourmaincomponents.activities.SecondActivity
-import com.tmdtouch.learnfourmaincomponents.activities.ServiceActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
@@ -122,6 +119,10 @@ class MainActivity : BaseActivity() {
 
         open_broadcast_activity_btn.setOnClickListener {
             val intent = Intent(this@MainActivity, BroadcastActivity::class.java)
+            startActivity(intent)
+        }
+        open_content_provider_activity_btn.setOnClickListener {
+            val intent = Intent(this@MainActivity, ContentProviderActivity::class.java)
             startActivity(intent)
         }
     }

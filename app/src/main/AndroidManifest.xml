@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.tmdtouch.learnfourmaincomponents">
 
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +14,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <!--学习 Activity 的生命周期和启动模式-->
+        <!-- 学习 Activity 的生命周期和启动模式 -->
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation">
@@ -37,7 +39,7 @@
             android:name=".activities.OtherLaunchModeActivity"
             android:launchMode="singleTask" />
 
-        <!--学习 service-->
+        <!-- 学习 service -->
         <service
             android:name=".services.MyService"
             android:enabled="true"
@@ -46,18 +48,22 @@
 
         <activity android:name=".activities.ServiceActivity" />
 
-        <!--学习 广播-->
+        <!-- 学习 广播 -->
         <activity android:name=".activities.BroadcastActivity" />
-        <!--静态注册广播-->
+        <!-- 静态注册广播 -->
         <receiver
             android:name=".broadcastreceivers.MyBroadcastReceiver"
             android:enabled="true"
             android:exported="true">
+
             <!-- priority 设置 广播的优先级 -->
             <intent-filter android:priority="100">
                 <action android:name="com.example.broadcasttest.MY_BROADCAST" />
             </intent-filter>
         </receiver>
+
+        <!-- 学习内容提供器 -->
+        <activity android:name=".activities.ContentProviderActivity" />
     </application>
 
 </manifest>
