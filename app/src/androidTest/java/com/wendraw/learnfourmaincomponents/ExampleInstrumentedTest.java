@@ -1,4 +1,4 @@
-package com.tmdtouch.learnfourmaincomponents;
+package com.wendraw.learnfourmaincomponents;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

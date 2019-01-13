@@ -1,4 +1,4 @@
-package com.tmdtouch.learnfourmaincomponents.services
+package com.wendraw.learnfourmaincomponents.services
 
 import android.app.IntentService
 import android.content.Intent

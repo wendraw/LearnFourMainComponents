@@ -1,4 +1,4 @@
-package com.tmdtouch.learnfourmaincomponents.fragments;
+package com.wendraw.learnfourmaincomponents.fragments;
 
 import android.content.Context;
 import android.os.Bundle;

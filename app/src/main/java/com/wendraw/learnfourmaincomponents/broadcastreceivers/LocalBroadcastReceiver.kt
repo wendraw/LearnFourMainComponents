@@ -1,4 +1,4 @@
-package com.tmdtouch.learnfourmaincomponents.broadcastreceivers
+package com.wendraw.learnfourmaincomponents.broadcastreceivers
 
 import android.content.BroadcastReceiver
 import android.content.Context

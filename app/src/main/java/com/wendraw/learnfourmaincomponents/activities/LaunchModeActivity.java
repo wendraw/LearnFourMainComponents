@@ -1,9 +1,9 @@
-package com.tmdtouch.learnfourmaincomponents.activities;
+package com.wendraw.learnfourmaincomponents.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.tmdtouch.learnfourmaincomponents.R;
+import com.wendraw.learnfourmaincomponents.R;
 
 public class LaunchModeActivity extends BaseActivity {
 

@@ -1,4 +1,4 @@
-package com.tmdtouch.learnfourmaincomponents.activities;
+package com.wendraw.learnfourmaincomponents.activities;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.tmdtouch.learnfourmaincomponents.R;
+import com.wendraw.learnfourmaincomponents.R;
 
 public class BaseActivity extends AppCompatActivity {
     public final String TAG = "Life Cycle - " + getClass().getSimpleName();

@@ -1,16 +1,14 @@
-package com.tmdtouch.learnfourmaincomponents
+package com.wendraw.learnfourmaincomponents
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.util.Log
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
-import com.tmdtouch.learnfourmaincomponents.activities.*
-
+import com.wendraw.learnfourmaincomponents.activities.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {

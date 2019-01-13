@@ -1,4 +1,4 @@
-package com.tmdtouch.learnfourmaincomponents.fragments;
+package com.wendraw.learnfourmaincomponents.fragments;
 
 
 import android.os.Bundle;
@@ -7,8 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.tmdtouch.learnfourmaincomponents.R;
-import com.tmdtouch.learnfourmaincomponents.fragments.BaseFragment;
+import com.wendraw.learnfourmaincomponents.R;
 
 
 /**

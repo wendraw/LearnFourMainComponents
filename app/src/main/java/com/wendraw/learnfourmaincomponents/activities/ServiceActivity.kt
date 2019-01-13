@@ -1,4 +1,4 @@
-package com.tmdtouch.learnfourmaincomponents.activities
+package com.wendraw.learnfourmaincomponents.activities
 
 import android.content.ComponentName
 import android.content.Context
@@ -8,15 +8,17 @@ import android.os.Bundle
 import android.os.IBinder
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import com.tmdtouch.learnfourmaincomponents.R
-import com.tmdtouch.learnfourmaincomponents.services.MyIntentService
-import com.tmdtouch.learnfourmaincomponents.services.MyService
+import com.wendraw.learnfourmaincomponents.R
+import com.wendraw.learnfourmaincomponents.services.MyIntentService
+import com.wendraw.learnfourmaincomponents.services.MyService
 import kotlinx.android.synthetic.main.activity_service.*
 
 class ServiceActivity : AppCompatActivity() {
 
     private lateinit var mBinder: MyService.MyBinder
     private lateinit var mServiceConnection: ServiceConnection
+
+    private var isBind = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +35,7 @@ class ServiceActivity : AppCompatActivity() {
         }
 
         bind_service_btn.setOnClickListener {
+            isBind = true
             mServiceConnection = MyServiceConnection()
             val intent = Intent(this@ServiceActivity, MyService::class.java)
             bindService(intent, mServiceConnection, Context.BIND_AUTO_CREATE)
@@ -52,7 +55,9 @@ class ServiceActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        unbindService(mServiceConnection)
+        if (isBind) {
+            unbindService(mServiceConnection)
+        }
     }
 
     inner class MyServiceConnection : ServiceConnection {

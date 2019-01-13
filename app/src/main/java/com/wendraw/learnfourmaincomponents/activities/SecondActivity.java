@@ -1,11 +1,11 @@
-package com.tmdtouch.learnfourmaincomponents.activities;
+package com.wendraw.learnfourmaincomponents.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
-import com.tmdtouch.learnfourmaincomponents.fragments.FirstFragment;
-import com.tmdtouch.learnfourmaincomponents.R;
+import com.wendraw.learnfourmaincomponents.fragments.FirstFragment;
+import com.wendraw.learnfourmaincomponents.R;
 
 public class SecondActivity extends BaseActivity {
 

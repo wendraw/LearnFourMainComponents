@@ -1,12 +1,12 @@
-package com.tmdtouch.learnfourmaincomponents.activities
+package com.wendraw.learnfourmaincomponents.activities
 
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import android.support.v4.content.LocalBroadcastManager
 import android.support.v7.app.AppCompatActivity
-import com.tmdtouch.learnfourmaincomponents.R
-import com.tmdtouch.learnfourmaincomponents.broadcastreceivers.LocalBroadcastReceiver
+import com.wendraw.learnfourmaincomponents.R
+import com.wendraw.learnfourmaincomponents.broadcastreceivers.LocalBroadcastReceiver
 import kotlinx.android.synthetic.main.activity_broadcast.*
 
 class BroadcastActivity : AppCompatActivity() {

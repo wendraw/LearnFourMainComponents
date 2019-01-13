@@ -1,4 +1,4 @@
-package com.tmdtouch.learnfourmaincomponents.activities
+package com.wendraw.learnfourmaincomponents.activities
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -10,7 +10,7 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import com.tmdtouch.learnfourmaincomponents.R
+import com.wendraw.learnfourmaincomponents.R
 import kotlinx.android.synthetic.main.activity_content_provider.*
 import java.util.ArrayList
 
