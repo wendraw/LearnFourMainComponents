@@ -14,6 +14,7 @@ public class SecondActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        //动态替换 Fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.fragment_layout, new FirstFragment());

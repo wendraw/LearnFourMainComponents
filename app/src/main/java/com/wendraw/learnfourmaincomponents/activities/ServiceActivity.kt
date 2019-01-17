@@ -24,16 +24,19 @@ class ServiceActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_service)
 
+        //使用 startService 方式启动 Service
         start_service_btn.setOnClickListener {
             val intent = Intent(this@ServiceActivity, MyService::class.java)
             startService(intent)
         }
 
+        //停止 Service
         stop_service_btn.setOnClickListener {
             val intent = Intent(this@ServiceActivity, MyService::class.java)
             stopService(intent)
         }
 
+        //使用 bindService  方式启动 Service
         bind_service_btn.setOnClickListener {
             isBind = true
             mServiceConnection = MyServiceConnection()
@@ -41,10 +44,12 @@ class ServiceActivity : AppCompatActivity() {
             bindService(intent, mServiceConnection, Context.BIND_AUTO_CREATE)
         }
 
+        //解绑 Service
         unbind_service_btn.setOnClickListener {
             unbindService(mServiceConnection)
         }
 
+        //使用 startService 方式启动 IntentService
         start_intent_service_btn.setOnClickListener {
             //打印主线程的 id
             Log.d("ServiceActivity", "Thread id is " + Thread.currentThread().id)
@@ -56,6 +61,7 @@ class ServiceActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         if (isBind) {
+            //当活动被销毁时，需要解绑 Service
             unbindService(mServiceConnection)
         }
     }

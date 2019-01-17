@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.wendraw.learnfourmaincomponents.R;
-
 public class BaseActivity extends AppCompatActivity {
     public final String TAG = "Life Cycle - " + getClass().getSimpleName();
     public final String LAUNCHMODE = "Life Cycle(Launch Mode) - " + getClass().getSimpleName();
@@ -16,7 +14,6 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         Log.d(TAG, "**************onCreate**************");
         Log.d(LAUNCHMODE, "onCreate: " + getClass().getSimpleName() + "'s TaskId: "
                 + getTaskId() + " HashCode: " + this.hashCode());
@@ -66,6 +63,9 @@ public class BaseActivity extends AppCompatActivity {
                 + getTaskId() + " HashCode: " + this.hashCode());
     }
 
+    /**
+     * 打印 taskAffinity 属性
+     */
     protected void dumpTaskAffinity() {
         try {
             ActivityInfo info = this.getPackageManager()

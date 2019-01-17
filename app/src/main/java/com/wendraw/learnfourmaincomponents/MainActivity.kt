@@ -6,16 +6,11 @@ import android.support.v7.app.AlertDialog
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
 import android.widget.Toast
 import com.wendraw.learnfourmaincomponents.activities.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
-
-    private var mOpenActivityBtn: Button? = null
-    private var mOpenAlertDialogBtn: Button? = null
-    private var mLearnLaunchModeBtn: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,14 +70,12 @@ class MainActivity : BaseActivity() {
     }
 
     private fun initButtons() {
-        mOpenActivityBtn = findViewById(R.id.open_new_activity_btn)
-        mOpenActivityBtn!!.setOnClickListener { v ->
+        open_new_activity_btn.setOnClickListener {
             val intent = Intent(this@MainActivity, SecondActivity::class.java)
             startActivity(intent)
         }
 
-        mOpenAlertDialogBtn = findViewById(R.id.open_alert_dialog_btn)
-        mOpenAlertDialogBtn!!.setOnClickListener { v ->
+        open_alert_dialog_btn.setOnClickListener {
             //通过 AlertDialog.Builder 实例化一个 AlertDialog 对象。
             val builder = AlertDialog.Builder(this@MainActivity)
             //设置 Title 的图标
@@ -101,8 +94,7 @@ class MainActivity : BaseActivity() {
             builder.show()
         }
 
-        mLearnLaunchModeBtn = findViewById(R.id.learn_launch_mode_btn)
-        mLearnLaunchModeBtn!!.setOnClickListener { v ->
+        learn_launch_mode_btn.setOnClickListener {
             //            Intent intent = new Intent(MainActivity.this, LaunchModeActivity.class);
 
             val intent = Intent()

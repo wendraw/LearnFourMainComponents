@@ -4,6 +4,7 @@
     package="com.wendraw.learnfourmaincomponents">
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -24,10 +25,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.SecondActivity" />
         <activity
             android:name=".activities.LaunchModeActivity"
-            android:launchMode="singleInstance"
+            android:launchMode="standard"
             android:taskAffinity="com.wendraw.demo.singleinstance">
             <intent-filter>
                 <action android:name="com.wendraw.demo.singleinstance" />
@@ -37,7 +37,10 @@
         </activity>
         <activity
             android:name=".activities.OtherLaunchModeActivity"
-            android:launchMode="singleTask" />
+            android:launchMode="standard" />
+
+        <!-- 学习 Fragment-->
+        <activity android:name=".activities.SecondActivity" />
 
         <!-- 学习 service -->
         <service

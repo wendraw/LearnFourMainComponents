@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 public class BaseFragment extends Fragment {
 
-    public final String TAG = "Life Cycle        " + this.getClass().getSimpleName();
+    private final String TAG = "Life Cycle -" + this.getClass().getSimpleName();
 
     @Override
     public void onAttach(Context context) {
